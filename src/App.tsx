@@ -69,7 +69,8 @@ export const App = () => {
 
                 console.log('ffmpeg:start', ffmpeg);
 
-                const baseURL = '/@ffmpeg/core@0.12.6/dist/esm';
+                const baseURL =
+                    '/merge-audio-video/@ffmpeg/core@0.12.6/dist/esm';
                 await ffmpeg.load({
                     coreURL: await toBlobURL(
                         `${baseURL}/ffmpeg-core.js`,
@@ -79,7 +80,8 @@ export const App = () => {
                         `${baseURL}/ffmpeg-core.wasm`,
                         'application/wasm',
                     ),
-                    classWorkerURL: '/@ffmpeg/ffmpeg/dist/esm/worker.js',
+                    classWorkerURL:
+                        '/merge-audio-video/@ffmpeg/ffmpeg/dist/esm/worker.js',
                 });
 
                 ffmpegRef.current = ffmpeg;
