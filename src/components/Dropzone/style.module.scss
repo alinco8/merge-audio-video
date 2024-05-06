@@ -1,0 +1,16 @@
+.dropzone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px dashed gray;
+    border-radius: 5px;
+    width: 75px;
+    height: 75px;
+    transition: font-size 0.5s;
+    box-sizing: border-box;
+    font-size: small;
+
+    &.active {
+        font-size: large;
+    }
+}
